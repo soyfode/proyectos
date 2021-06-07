@@ -1,0 +1,71 @@
+descripcion,id,pregunta
+"
+            httpd: Syntax error on line 522 of /Applications/XAMPP/xamppfiles/etc/httpd.conf: Syntax error on line 6 of /Applications/XAMPP/xamppfiles/etc/extra/httpd-xampp.conf: Cannot load modules/mod_perl.so ...
+        ",[0],apache web server not running. i'm using mac
+"
+            How can I center my 2 circle in my column with bs4 please ?
+<div class=""row"">
+    <div class=""col-6 circle"">
+        <div class=""circle__inner"">
+        ...
+        ",[1],Center element in col with bs4
+"
+            after login and successfully storing jwt token in localStorage i want redirect login to dashboard page if i am logged in so i can't access the login or sign up page that is all i want please help to ...
+        ",[2],After login i want to redirect for jitsiReact page
+"
+            i am trying to run my existing flutter application on web, after adding the support for web and adding firebase javascript code to my index.html, when i run the application on  a browser i get this ...
+        ",[3],how to Configure href url for flutter web in index.html
+"
+            I want to make a universal search where I search the db with a given text for a particular company. I have a products collection with each document having following fields
+{
+  _id: '',
+  company: '...
+        ",[4],String matching using regex for array of items in a document in mongodb collection
+"
+            I am trying to update the value of a button with id 'cost' on click.
+Here is my script :
+<script>
+    var costObj = document.getElementById('cost');
+    function change() {
+        costObj.value ...
+        ",[5],Javascript function cannot update variable
+"
+            I'm using the following code to dynamically access each column of the data frame and draw the probability plot as follows.
+figure, axis = plt.subplots(3, 2)
+
+for (k,v) in enumerate([str(col) for col ...
+        ",[6],Use dynamically selected df column in drawing scipy probplots
+"
+            Am using psbbix module for some operations to manage zabbix from powershell.
+This following command gives the whole body which I configured in trigger.
+Get-ZabbixAlert | select @{n=""test"";e={...
+        ",[7],Filtering words from paragraph powershell
+"
+            I recently started using react-toastify and everything worked fine until I noticed this odd behavior.
+Here is my code:
+this.adderrorNotification('Error: Please try again!')
+adderrorNotification(...
+        ",[8],React toastify toast appears 4 times with every single call
+"
+            the API return a html code and I need to run them after received
+<div><script src=""https://test.com/checkoutcheckout.js"" data-error=""error"" data-cancel=""cancel""&...
+        ",[9],How to run a JavaScript code after append them to a div
+"
+            I use springboot and kotlin for my microservice project.
+I am a new learner of springBoot Microservices. while I try to connect
+my project with git repository using cloud config server I get this
+type ...
+        ",[10],Invalid config server configuration working with spring boot cloud config server in microservice project
+"
+            I have demo page which have three panel and each panel have there own title or headline.I want to make these title in same line or horizontal align .So my plan is to make panel  1 and panel  2 title ...
+        ",[11],how to text align horizontally using javascript?
+"
+            I try to install PHP 8.0.6 the current stable version in Wampserver 3.2.3 64 but didn't work, I need some help!
+I give me an error about the PHP module and then a PhpMyAdmin error.
+        ",[12],Is PHP 8.0.6 compatible with Wampserver 3.2.3 64?
+"
+            Currently while exporting order the line item compare at price is empty . I create order via API and the line item compare at price is empty(the line item has compare at price) but when I use the ...
+        ",[13],How do I get Line Item compare at price in order Export in Shopify?
+"
+            I have an application which uses some external scripts to read and write information to media files. Some of the operations take a few seconds, so I want to implement a wait/loading screen into my ...
+        ",[14],Easily run a function in the background

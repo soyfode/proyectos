@@ -1,0 +1,83 @@
+descripcion,id,pregunta
+"
+            Say, I have a video and I have divided it in 7 parts and saved each of these parts separately and its length is 20 seconds.
+Now what I want to do is, I want to create a program to extend this video to ...
+        ",[0],How to repeat parts of clips n number of time using python
+"
+            I have a file with around 16500 rows. I would like to join each 500 lines into one single row, for all lines in the file. So, I want to end up with a file with 33 rows (16500/500)
+This is how the file ...
+        ",[1],Merge each 500 lines into 1 line (from 15000 rows)
+"
+            I have this code and it works on the rest of the website but when it gets to the cart/basket it will apply the discount to products that have the category 'minis' when it shouldn't...
+add_filter( '...
+        ",[2],Time activated discounts not working correct in cart
+"
+            The element I'm trying to position is still positioned inside of its parent even though I have positioned it absolute.
+HTML
+<div class=""panel"">
+  '... other elements'
+  <cuik-url-...
+        ",[3],Absolute Positioning is not working as I wanted to
+"
+            There is a problem with rendering target switch on Raspberry Pi. SDL_SetRenderTarget() hangs if multiple renderer switch occurs.
+This is a working code that prints milliseconds since application ...
+        ",[4],SDL_SetRenderTarget() hangs for a while if multiple renderer switch occurs
+"
+            I have a view:
+struct playerView : View {
+@ObservedObject var viewModel = playerViewModel()
+var body : some View {
+   Vstack {
+       Button( action: { viewModel.play() }) {
+       Text(""Play&...
+        ",[5],AVPlayer SwiftUI check for status (MVVM)
+"
+            Say I have this df:
+df <- tibble(v1 = c('abc [effort]', 'abc [effort]', 'def [effort]', 'def [effort]', 'ghi [effort]', 'abc [scope]', 'abc [scope]', 'def [scope]', 'ghi [scope]', 'ghi [scope]'), 
+ ...
+        ",[6],Piping df into mutate + substring expression
+"
+            enter image description here
+I am completely new in React Ecosystem.
+
+I wanna filter the list by selecting more then on checkbox.
+Example : If I select Audi and Mercedes it will fetch the data and ...
+        ",[7],How to filter a list based on multiple checkbox checked in react using useState
+"
+            Is there any alternative function in jquery like NULLIF() in sql server?Is there any alternative function in jquery like NULLIF() in sql server?
+        ",[8],Is there any alternative function in jquery like NULLIF() in sql server?
+"
+            We are getting the below error in Nginx and due to this error Nginx stopped working; Please let me know how to fix it
+dlopen() ""/usr/share/nginx/modules/ngx_http_lua_module.so"" failed nginx: ...
+        ",[9],Nginx Module Error : dlopen() “/usr/share/nginx/modules/ngx_http_lua_module.so” failed
+"
+            The first variable needs to be DOM as you can see is commented out.
+It works when i manually set the productCode variable like below.
+
+let productCode = '95232' //document.getElementById('pCode')....
+        ",[10],Why doesn't my function work when the argument is a changing DOM variable?
+"
+            I have a page i am building in vue forumate. I have a bedroom i want to add and in that bedroom there are various types of beds in it
+<FormulateInput
+                        type=""group""
+ ...
+        ",[11],Adding Another Repeatable Group in Vue Formulate
+"
+            I am relatively new to pyton and struggling with something that i feel should be straight forward.
+I have a dataframe with a timestamp and I want to check to see if it is between 11pm and 6am and if ...
+        ",[12],Compare time part of time stamp to see if it is between a range - in a dataframe in Python and return a new column with True/False
+"
+            I'm trying to create a virtual model of a production plant.
+For that I created the following structure:
+
+First of all there must be a parts file, which shows all the parts processed.
+For each part ...
+        ",[13],Objects disappear when I try to pass them to another class
+"
+            What is this node** head_ref ?
+void push(node** head_ref, int new_data){
+node* new_node=new node;
+new_node->data=new_data;
+new_node->next=(*head_ref);
+(*head_ref)=new node;
+        ",[14],Is this double pointer as head_reference?
