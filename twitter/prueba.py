@@ -1,10 +1,15 @@
+from dotenv import load_dotenv
+import os
 import tweepy
 import json
+import csv
 
-access_token = '1193375205424541697-AFjUxzOmuuOOnM0I2roXnuwrb4lT0c'
-access_token_secret = '34WENDNHQrCZFjzmyAljXRPqwq04jCrZcYzCQ0Otc26oA'
-consumer_key = '0UtEKJpGR8X4mUdyeWvvTlm8u'
-consumer_secret = 'XQWxWYFqIlcwA7Odscj6NFZvUoJmefv6X8JZh83xVAWobQh11U'
+load_dotenv()
+
+access_token = os.getenv("ACCESS_TOKEN_twitter")
+access_token_secret = os.getenv("ACCESS_TOKEN_SECRET_twitter")
+consumer_key = os.getenv("CONSUMER_KEY_twitter")
+consumer_secret = os.getenv("CONSUMER_SECRET_twitter")
 
 auth = tweepy.OAuthHandler(
         consumer_key,
@@ -47,13 +52,32 @@ for tweet in tweepy.Cursor(api.user_timeline,screen_name="riosmauricio",tweet_mo
     print(json.dumps(tweet._json, indent=2))
 """
 
-"""
 # Buscar tweets
-for tweet in tweepy.Cursor(api.search_tweets, q="censo2023", tweet_mode="extended").items(20):
-    #print(json.dumps(tweet._json, indent=2,ensure_ascii=False))
-    print(tweet.full_text)
+try:
+    specific_tweets = tweepy.Cursor(api.search_tweets, tweet_mode='extended', q="comunista"+" -filter:retweets", lang='es').items(100)
+except tweepy.errors.TweepyException:
+    pass
+for tweet in specific_tweets:
+    extracted_text = tweet.full_text
+    geo = tweet.user.location
+    print(extracted_text)
+    print(geo)
     print()
+
+
 """
+for tweet in tweepy.Cursor(api.search_tweets, q="Manifiesto Comunista", tweet_mode="extended").items(10):
+    #print(json.dumps(tweet._json, indent=2,ensure_ascii=False))
+    fullText = tweet.full_text
+    text = []
+    text.append(fullText)
+    print(text)
+"""
+
+
+
+
+    
 
 
 
