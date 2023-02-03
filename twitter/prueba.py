@@ -54,15 +54,19 @@ for tweet in tweepy.Cursor(api.user_timeline,screen_name="riosmauricio",tweet_mo
 
 # Buscar tweets
 try:
-    specific_tweets = tweepy.Cursor(api.search_tweets, tweet_mode='extended', q="comunista"+" -filter:retweets", lang='es').items(100)
+    specific_tweets = tweepy.Cursor(api.search_tweets, tweet_mode='extended', q="amor", lang='es').items(100)
 except tweepy.errors.TweepyException:
     pass
 for tweet in specific_tweets:
     extracted_text = tweet.full_text
-    geo = tweet.user.location
-    print(extracted_text)
-    print(geo)
-    print()
+    if tweet.place is not None:
+        geo = tweet.place["bounding_box"]["coordinates"]
+
+    """
+    with open('tweets.csv', 'a', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow([extracted_text, geo])
+    """
 
 
 """
