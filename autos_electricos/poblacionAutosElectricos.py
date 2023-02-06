@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 ###############################
 
 
-
 ########################### TOKEN ##############################
 ################################################################
 
@@ -37,81 +36,18 @@ client =  Socrata("data.wa.gov",
 #############################################
 
 results = client.get("f6w7-q2d2",limit=114600)
-df = pd.DataFrame.from_records(results)
+data = pd.DataFrame.from_records(results)
+for i in range(len(data)):
+    x = data["geocoded_column"][i]["coordinates"][0]
+    y = data["geocoded_column"][i]["coordinates"][1]
+    print(x,y)
 
 ##############################################
 ##############################################
 
-
-##########################################
-########### Data exploration #############
-"""
-# print first 5 rows
-print(df.head())
-
-# shape of data
-print(df.shape)
-
-# column names list of data 
-print(df.columns.tolist())
-
-# summary of data
-print(df.describe())
-"""
-##########################################
-##########################################
-
-countModelYear = df.groupby("model_year")["model_year"].count()
-# plot x-label years and y-label count
-countModelYear.plot(kind="bar", title="Count of Model Year")
-plt.show()
-
-
-df1 = df[["model_year","make","model"]]
-model = df1.pivot_table(values = "model", index=["make"],columns="model_year", aggfunc="count",fill_value="-",margins=True)
-timeCar = model.sort_values("All",ascending=True)
-print(timeCar)
 
 
 """
 # groupby model and make
 groupModel = df.groupby(["make","model"])["model"].count()
 """
-
-"""
-dfgeo = df[["make","Vehicle Location"]]
-
-print(dfgeo["Vehicle Location"].head())
-"""
-
-"""
-dfgeo.plot(kind="scatter", x="Make", y="Vehicle Location", title="Make and Vehicle Location")
-plt.show()
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
