@@ -1,4 +1,3 @@
-
 # MODELO DE CLASIFICACIÓN
 
 # 1. Construir un clasificador.
@@ -12,10 +11,11 @@
 # K-NEAREST NEIGHBORS (KNN) (k-vecinos más cercanos)
 
 # La idea es predecir la etiqueta de cualquier punto de datos mirando la k etiquetados más cercanos.
-# KNN crea un límite de decisión para predecir si los clientes abondonarán o no el servicio.
+# KNN crea un límite de decisión para predecir si los clientes abandonarán o no el servicio.
 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -71,12 +71,20 @@ plt.plot(neighbors,test_accuracies.values(),label="Precisión de prueba")
 plt.legend()
 plt.xlabel("Número de vecinos")
 plt.ylabel("Precisión")
-plt.show()
+#plt.show(block=False)
+plt.pause(3)
+plt.close()
 
 # K será igual a 13
 knn = KNeighborsClassifier(n_neighbors=13)
 knn.fit(X_train,y_train)
-print(knn.score(X_test,y_test)) 
+y_pred = knn.predict(X_test)
+print(knn.score(X_test,y_test)) #R2
+print(confusion_matrix(y_test,y_pred)) # Matriz de confusión
+# 832 Verdaderos negativos (1ra fila, 1ra columna)
+print(classification_report(y_test,y_pred)) # Reporte de clasificación
+
+
 
 
 
