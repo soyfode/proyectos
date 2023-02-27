@@ -1,0 +1,40 @@
+from scrapy.item import Field
+from scrapy.item import Item
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.selector import Selector
+from scrapy.loader.processors import MapCompose
+from scrapy.linkextractors import LinkExtractor
+from scrapy.loader import ItemLoader
+
+class XvideosItem(Item):
+    etiqueta = Field()
+    videos = Field()
+
+class XvideosCrawler(CrawlSpider):
+    name = 'xvideos'
+    costum_settings = {
+        'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+        'CLOSESPIDER_PAGECOUNT':10 # Límite de extracciones 
+    }
+
+    download_delay = 1 # Tiempo de espera entre cada requerimiento
+
+    allowed_domains = ['xvideos.com'] # Sólo se extraerá de este dominio
+
+    start_urls = ['https://www.xvideos.com/tags'] # Página de inicio
+
+    rules = (
+        Rule(
+            LinkExtractor(
+                allow=r'/'
+            ), follow=True, callback='parse_items' # Extraerá los datos de la página
+        ),
+    )
+
+    def parse_items(self, response):
+        sel = Selector(response)
+        item = ItemLoader(XvideosItem(), sel)
+        item.add_xpath('etiqueta', '//id[@class="tags"]/li/a/b/text()')
+        item.add_xpath('videos', '//*[@id="tags"]/li/a/span/text()')
+
+        yield item.load_item()
