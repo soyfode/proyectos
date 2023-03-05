@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.metrics import mean_squared_error, classification_report, confusion_matrix
 from sklearn.metrics import roc_curve, roc_auc_score
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
 ##########################################################
 
 ################## DATA #######################

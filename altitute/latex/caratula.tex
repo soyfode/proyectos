@@ -1,0 +1,50 @@
+\begin{titlingpage}
+
+\newcommand\nbvspace[1][3]{\vspace*{\stretch{#1}}}
+% allow some slack to avoid under/overfull boxes
+\newcommand\nbstretchyspace{\spaceskip0.5em plus 0.25em minus 0.25em}
+% To improve spacing on titlepages
+\newcommand{\nbtitlestretch}{\spaceskip0.6em}
+\pagestyle{empty}
+
+\begin{center}
+\bfseries
+\nbvspace[1]
+
+\Large Test Excel\\
+\Huge
+{\nbtitlestretch\Huge REPORTE DE VENTAS}\\
+\vspace{.5cm}
+\large
+Tienda de retail.\\
+\nbvspace[1]
+
+\nbvspace[1]
+\small POR\\
+\Large Christian Limbert Paredes Agullera\\[0.5em]
+
+\nbvspace[2]
+
+% import logo
+\includegraphics[width=0.35\textwidth]{logo.png}\\
+
+\nbvspace[3]
+\normalsize
+
+Enero a Julio 2017\\
+\large
+\nbvspace[1]
+
+\end{center}
+
+\end{titlingpage}
+
+
+\pagenumbering{roman}
+
+
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\nouppercase{\truncate{0.5\headwidth}{\rightmark}}}
+\fancyhead[LO,RE]{\nouppercase{\truncate{0.5\headwidth}{\leftmark}}}
+
+
