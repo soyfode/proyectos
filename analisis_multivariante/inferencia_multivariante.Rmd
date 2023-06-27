@@ -1,0 +1,12 @@
+---
+title: "Inferencia Multivariante"
+author: "Christian Limbert Paredes Aguilera"
+date: "2023-06-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+```
+
+
+
